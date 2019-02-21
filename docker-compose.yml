@@ -27,7 +27,7 @@ services:
       - ./logstash/config/logstash-sample.conf:/usr/share/logstash/config/logstash-sample.conf:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
     ports:
-      - "5000:5000"
+      - "5000:5000/udp"
       - "9600:9600"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
